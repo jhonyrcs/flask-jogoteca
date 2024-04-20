@@ -13,12 +13,13 @@
             <div class="form-group">
                 <label for="console">Console</label>
                 <select type="text" id="console" name="console" class="form-control">
-                    <option value="" disabled selected hidden>Selecione o console</option>
+                    <option value="" disabled selected hidden>Selecione aqui o console...</option>
                     {% for console in consoles %}
-                    <option placeholder="Selecione um valor" value="{{ console.nome }}">{{ console.nome }}</option>
+                    <option value="{{ console.nome }}">{{ console.nome }}</option>
                     {% endfor %}
                 </select>
             </div>
+            <a href="{{ url_for('index') }}" class="btn btn-danger btn-cancelar">Cancelar</a>
             <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
         </fieldset>
     </form>
