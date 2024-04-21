@@ -1,6 +1,6 @@
 {% extends "template.html"%}
 {% block conteudo %}
-    <form action="/criar" method="post">
+    <form action="{{ url_for('criar') }}" method="post">
         <fieldset>
             <div class="form-group">
                 <label for="nome">Nome</label>
@@ -13,7 +13,7 @@
             <div class="form-group">
                 <label for="console">Console</label>
                 <select type="text" id="console" name="console" class="form-control">
-                    <option value="" disabled selected hidden>Selecione aqui o console...</option>
+                    <option value="" disabled selected hidden>Selecione o console aqui...</option>
                     {% for console in consoles %}
                     <option value="{{ console.nome }}">{{ console.nome }}</option>
                     {% endfor %}
